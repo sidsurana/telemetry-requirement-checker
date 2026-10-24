@@ -1,0 +1,10 @@
+{
+  "name": "telemetry-requirement-checker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests.mjs"
+  },
+  "description": "Compare synthetic test requirements and telemetry with traceable evidence checks.",
+  "license": "MIT"
+}

@@ -1,0 +1,2 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {analyze,sample} from './engine.mjs';
+test('finds exact failing telemetry row',()=>{let r=analyze(sample);assert.equal(r.rows.filter(x=>x.status==='FAIL').length,1);assert.match(r.rows[2].evidence,/row 4/)});test('rejects malformed and missing readings',()=>{assert.throws(()=>analyze('bad'));assert.throws(()=>analyze('time_ms,temperature_c,voltage_v\n0,,5'))});
